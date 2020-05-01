@@ -1,0 +1,43 @@
+react nativee
+\echo "# burgerApps" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Diko99/burgerApps.git
+git push -u origin master
+keywords
+
+react native snap carousel,
+adb usb
+yellow books untuk menghidden warning
+
+meet 2
+change logo icon apps 
+steps
+android/res/mipmap
+you can go to menu new -> assets-image
+1.
+go to forground_layer
+change source asset path = your folder image want u change your logo
+ceklist yes on scalling
+and resize your apps logo
+2.
+go to background layer
+change source asset assets type color
+
+
+setting eslint
+eslint standart react
+eslint standart
+
+reactnative vector icon https://github.com/oblador/react-native-vector-icons
+import CheckBox from 'react-native-check-box'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+react-navigatoin for routing on react native
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install @react-navigation/native
+npm install @react-navigation/stack
+npm install react-native-star-rating by william
+react navigation button 
+
+change name apps go to folder android/app/src/main/res/values/strings.xml
