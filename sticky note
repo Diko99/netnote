@@ -257,3 +257,42 @@ module.exports = [
           </div>
         )
       }
+      
+      
+       return (
+        <ListItem
+          key={index.toString()}
+          button
+          exact
+          className={classes.nested}
+          activeClassName={classes.active}
+          onClick={() => this.handleClick()}
+        >
+          <div className='container-fluid'>
+            <div className='row'>
+              <div className='col-md-2'>                
+                <Ionicon
+                  style={{
+                    color: '#47544a'
+                  }}
+                  icon={item.icon}
+                />            
+              </div>
+              <div className='col-md-10'>
+                <Link
+                  to={item.link}
+                  style={{
+                    fontSize: 13,
+                    textDecoration: 'none',
+                    textTransform: 'uppercase',
+                    fontWeight: 500 ,
+                    color: '#47544a'
+                  }}
+                >
+                  {item.name}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </ListItem>
+      );
