@@ -183,3 +183,77 @@ module.exports = [
   }
 ];
 
+ if (item.title) {
+        return (
+          <ListSubheader
+            disableSticky
+            key={index.toString()}
+            component="div"
+            className={classes.title}
+          >
+            {item.name}
+            {item.icon}
+          </ListSubheader>
+        );
+      }
+      if (item.subchild) {
+        return(
+          <div>
+            <ListItem
+              button onClick={this.handleCollapse}
+              key={index.toString()}
+              button
+              exact
+              className={classes.nested}
+              activeClassName={classes.active}
+              to={item.link}
+            >
+              <div className='container-fluid'>
+                <div className='row'>
+                  <div className='col-md-2'>
+                    <Ionicon
+                      style={{
+                        color: '#47544a'
+                      }}
+                      icon={item.icon}
+                    />            
+                  </div>
+                  <div className='col-md-10'>
+                    <Link
+                      style={{
+                        fontSize: 13,
+                        textDecoration: 'none',
+                        textTransform: 'uppercase',
+                        fontWeight: 500,
+                        color: '#47544a'
+                      }}
+                      to={item.link}
+                    >
+                      {item.name}
+                    </Link>
+                    {isCollapse ? <ExpandMore /> : <ExpandLess />}
+                  </div>
+                </div>
+              </div>
+            </ListItem>
+            {/* <Collapse in={isCollapse} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem button>
+                  <Typography
+                    style={{
+                      fontSize: 13,
+                      textDecoration: 'none',
+                      textTransform: 'uppercase',
+                      fontWeight: 500
+                    }}>
+                      Custom
+                  </Typography>
+                  <ListItemIcon>
+                    <Ionicon icon={item.icon} />
+                  </ListItemIcon>
+                </ListItem>
+              </List>
+            </Collapse> */}
+          </div>
+        )
+      }
